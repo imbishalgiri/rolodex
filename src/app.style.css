@@ -2,5 +2,13 @@
 	display:flex;
 	flex-direction: column;
 	align-items: center;
-	background: royalblue;
+	background: rgb(96,90,191);
+	background: -webkit-linear-gradient(left, rgba(96,90,191,1) 0%, rgba(193,88,198,1) 54%, rgba(0,255,201,1) 100%);
+	background: -o-linear-gradient(left, rgba(96,90,191,1) 0%, rgba(193,88,198,1) 54%, rgba(0,255,201,1) 100%);
+	background: linear-gradient(to right, rgba(96,90,191,1) 0%, rgba(193,88,198,1) 54%, rgba(0,255,201,1) 100%); 
+}
+
+.loading {
+	position: absolute;
+	bottom: 20px;
 }

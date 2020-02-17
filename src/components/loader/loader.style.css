@@ -1,0 +1,32 @@
+.animation {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: rgb(96,90,191);
+	background: -webkit-linear-gradient(left, rgba(96,90,191,1) 0%, rgba(193,88,198,1) 54%, rgba(0,255,201,1) 100%);
+	background: -o-linear-gradient(left, rgba(96,90,191,1) 0%, rgba(193,88,198,1) 54%, rgba(0,255,201,1) 100%);
+	background: linear-gradient(to right, rgba(96,90,191,1) 0%, rgba(193,88,198,1) 54%, rgba(0,255,201,1) 100%);
+}
+
+.animation__elem {
+	width: 50px;
+	height: 50px;
+	background: purple;
+	margin: 20px;
+	animation-name: rotating;
+	animation-duration:  1s;
+	animation-iteration-count: infinite;
+
+}
+
+@keyframes rotating {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+

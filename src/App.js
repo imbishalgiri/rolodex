@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 
 import { CardList } from './components/cardlist/card-list.component';
 import SearchBox from './components/searchBox/searchBox.component';
+import Loader from './components/loader/loader.component';
 import './app.style.css';
 
 class App extends Component {
@@ -30,6 +31,10 @@ class App extends Component {
     const filteredMonsters = monsters.filter(monster => {
       return monster.name.toLowerCase().includes(searchField.toLowerCase());
     })
+    console.log(this.state);
+    if( !this.state.monsters.length ){
+      return <Loader animationName="Loading" />
+    }else{
     return(
       <div className="wrapper">
       <h1>monsters rolodex</h1>
@@ -40,6 +45,7 @@ class App extends Component {
       <CardList monsters={filteredMonsters} />
       </div>
     );
+  }
   }
 }
 
